@@ -16,7 +16,6 @@ module.exports = {
       // 为html插件新增属性 当项目模式时isProd = true
       config.plugin('html').tap(args => {
         args[0].isProd = true
-
         return args
       })
     })

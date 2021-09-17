@@ -135,7 +135,7 @@ export default {
 }
 </script>
 
-<style  lang="less">
+<style scoped lang="less">
 .send-btn {
   width: 90px;
   height: 23px;

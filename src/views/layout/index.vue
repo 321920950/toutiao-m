@@ -41,5 +41,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
+/deep/.van-tabbar--fixed {
+  position: fixed !important;
+}
 </style>

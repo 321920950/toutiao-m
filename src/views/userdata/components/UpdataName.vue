@@ -74,7 +74,7 @@ export default {
 }
 </script>
 
-<style scope lang="less">
+<style scoped lang="less">
 .field-wrap {
   padding: 10px;
 }
