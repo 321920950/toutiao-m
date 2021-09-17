@@ -10,7 +10,23 @@ import {
   Icon,
   Toast,
   Form,
-  CountDown
+  CountDown,
+  Cell,
+  Image,
+  Grid,
+  GridItem,
+  Dialog,
+  Tabs,
+  Tab,
+  List,
+  PullRefresh,
+  Popup,
+  Search,
+  Loading,
+  Divider,
+  ImagePreview,
+  Picker,
+  DatetimePicker
 
 } from 'vant'
 
@@ -25,3 +41,19 @@ Vue.use(Icon)
 Vue.use(Toast)
 Vue.use(Form)
 Vue.use(CountDown)
+Vue.use(Cell)
+Vue.use(Image)
+Vue.use(Grid)
+Vue.use(GridItem)
+Vue.use(Dialog)
+Vue.use(Tabs)
+Vue.use(Tab)
+Vue.use(List)
+Vue.use(PullRefresh)
+Vue.use(Popup)
+Vue.use(Search)
+Vue.use(Loading)
+Vue.use(Divider)
+Vue.use(ImagePreview)
+Vue.use(Picker)
+Vue.use(DatetimePicker)

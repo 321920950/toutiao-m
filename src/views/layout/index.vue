@@ -1,7 +1,9 @@
 <template>
   <div class="layout-container">
     <!-- 子路由出口 -->
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
     <!-- 子路由出口 -->
 
     <!-- 底部导航栏 -->
@@ -23,16 +25,19 @@
 
 <script>
 export default {
-  name: 'LayoutIndex'
-  // data () {
-  //   return {
-  //     active: ''
-  //   }
-  // },
-  // methods: {
-  //   // 切换标签时触发
-  //   onChange () { }
-  // }
+  name: 'LayoutIndex',
+  data () {
+    return {
+      active: ''
+    }
+  },
+  mounted () {
+    this.$store.commit('addCachePages', 'LayoutIndex')
+  },
+  methods: {
+    // 切换标签时触发
+    onChange () { }
+  }
 }
 </script>
 

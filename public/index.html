@@ -5,7 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+
+    <!-- 通过babel.config.js为html插件配置isProd属性 -->
+    <title><%= htmlWebpackPlugin.options.isProd ? '' : 'dev - ' %>今日头条</title>
+    <!-- 请求不携带referref 相当于跳过同源政策 -->
+    <meta name="referref" content="no-referrer">
+
+    <!-- 判断---如果是项目模式才加载下面资源 -->
+    <% if(htmlWebpackPlugin.options.isProd){ %>
+     <!-- 外部CDN资源css -->
+     <link href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+     <link href="https://cdn.bootcdn.net/ajax/libs/vant/2.12.26/index.min.css" rel="stylesheet">
+
+     <!-- 外部CDN资源js -->
+     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+     <script src="https://cdn.bootcdn.net/ajax/libs/vue-router/3.2.0/vue-router.min.js"></script>
+     <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+     <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+     <script src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+     <script src="https://cdn.bootcdn.net/ajax/libs/vant/2.12.26/vant.min.js"></script>
+     <% } %>
   </head>
   <body>
     <noscript>

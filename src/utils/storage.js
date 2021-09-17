@@ -3,13 +3,13 @@ export const getItem = name => {
   const data = window.localStorage.getItem(name)
   try {
     return JSON.parse(data)
-  } catch {
+  } catch (err) {
     return data
   }
 }
 export const setItem = (name, value) => {
   if (typeof value === 'object') {
-    JSON.stringify(value)
+    value = JSON.stringify(value)
   }
   window.localStorage.setItem(name, value)
 }

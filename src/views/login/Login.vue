@@ -97,6 +97,10 @@ export default {
         this.$toast.success('登录成功')
         // 登录成功将token等数据保存在Vuex容器中
         this.$store.commit('setUser', res.data)
+        this.$store.commit('removeCachePages', 'LayoutIndex')
+        // 登录成功跳转页面到my
+        // this.$router.back()
+        this.$router.push(this.$router.query.redirect || '/')
       } catch (err) {
         this.$toast.fail('登录失败,手机号或验证码错误')
       }
